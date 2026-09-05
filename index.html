@@ -177,6 +177,29 @@
   .process-step p{ color:var(--ink-soft); margin:0; font-size:0.95rem; }
   @media (max-width:760px){ .process-list{ grid-template-columns:1fr; } }
 
+  /* case study */
+  .case-intro{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:start; margin-bottom:48px; }
+  .case-intro p{ color:var(--ink-soft); max-width:52ch; }
+  .case-tag{ font-family:'IBM Plex Mono', monospace; font-size:0.82rem; color:var(--accent-ink); background:var(--paper-alt); display:inline-block; padding:6px 12px; border-radius:var(--radius); margin-bottom:16px; }
+  .case-quote{ background:var(--panel); border:1px solid var(--line); padding:24px 26px; font-size:0.98rem; color:var(--ink); }
+  .case-quote span{ display:block; margin-top:10px; font-family:'IBM Plex Mono', monospace; font-size:0.8rem; color:var(--ink-soft); }
+  .case-stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:48px; }
+  .case-stat{ background:var(--panel); padding:24px 22px; }
+  .case-stat .label{ font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color:var(--ink-soft); margin-bottom:10px; }
+  .case-stat .value{ font-family:'Space Grotesk', sans-serif; font-size:1.7rem; font-weight:600; }
+  .case-stat .delta{ font-family:'IBM Plex Mono', monospace; font-size:0.82rem; color:var(--status); margin-top:6px; }
+  @media (max-width:900px){ .case-intro{ grid-template-columns:1fr; } .case-stats{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px){ .case-stats{ grid-template-columns:1fr; } }
+
+  .case-timeline{ display:grid; gap:0; border-top:1px solid var(--line-soft); }
+  .case-tl-row{ display:grid; grid-template-columns:64px 200px 1fr; gap:20px; padding:16px 0; border-bottom:1px solid var(--line-soft); align-items:baseline; }
+  .case-tl-row .tl-no{ font-family:'IBM Plex Mono', monospace; color:var(--ink-soft); font-size:0.85rem; }
+  .case-tl-row .tl-period{ font-family:'IBM Plex Mono', monospace; font-size:0.85rem; color:var(--ink-soft); }
+  .case-tl-row .tl-body strong{ display:block; font-size:0.98rem; margin-bottom:3px; }
+  .case-tl-row .tl-body span{ color:var(--ink-soft); font-size:0.9rem; }
+  .case-tl-row.hl .tl-body strong{ color:var(--accent-ink); }
+  @media (max-width:700px){ .case-tl-row{ grid-template-columns:1fr; gap:4px; } .case-tl-row .tl-no{ display:none; } }
+
   /* support */
   .support{ background:var(--paper-alt); }
   .support-inner{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
@@ -220,6 +243,7 @@
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#stack">Stack</a>
+      <a href="#results">Results</a>
       <a href="#support">Support</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -343,6 +367,76 @@
           <li>Swift &amp; Kotlin</li>
           <li>AWS/GCP &amp; CI/CD</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" class="wrap">
+    <div class="section-head">
+      <h2>Recent results</h2>
+      <span class="section-num mono">Client case study</span>
+    </div>
+
+    <div class="case-intro">
+      <div>
+        <div class="case-tag">Independent restaurant · full-service dining</div>
+        <h3 style="font-size:1.4rem; margin-bottom:12px;">Reversing a two-year revenue decline into back-to-back record months</h3>
+        <p>A full-service restaurant client came to us with revenue that had been sliding for the better part of a year. We rebuilt their marketing around measurable acquisition and win-back campaigns, then used monthly revenue and order data to track what was actually working — cutting the decline in half within two months and turning it into sustained, compounding growth.</p>
+      </div>
+      <div class="case-quote ticked">
+        Ten months after launch, the client posted <strong>two consecutive record-breaking months</strong>, with August 2026 delivering the largest single-month year-over-year gain since the engagement began.
+        <span>From the August 2026 revenue review, prepared for the client</span>
+      </div>
+    </div>
+
+    <div class="case-stats">
+      <div class="case-stat">
+        <div class="label">Monthly revenue (latest)</div>
+        <div class="value">$281,228</div>
+        <div class="delta">+12.28% YoY — new record</div>
+      </div>
+      <div class="case-stat">
+        <div class="label">Year-to-date surplus</div>
+        <div class="value">+5.37%</div>
+        <div class="delta">+$108,515 over 8 months</div>
+      </div>
+      <div class="case-stat">
+        <div class="label">Avg. ticket value</div>
+        <div class="value">$63.27</div>
+        <div class="delta">+10.62% YoY, largest gain of the year</div>
+      </div>
+      <div class="case-stat">
+        <div class="label">Order volume</div>
+        <div class="value">4,445</div>
+        <div class="delta">+1.51% YoY, 3rd straight month positive</div>
+      </div>
+    </div>
+
+    <div class="case-timeline">
+      <div class="case-tl-row">
+        <div class="tl-no mono">01</div>
+        <div class="tl-period">Before engagement</div>
+        <div class="tl-body"><strong>Revenue declining 6.44% year-over-year</strong><span>A ~$17,500/month shortfall, compounding month after month with no clear driver identified.</span></div>
+      </div>
+      <div class="case-tl-row">
+        <div class="tl-no mono">02</div>
+        <div class="tl-period">Within 2 months</div>
+        <div class="tl-body"><strong>Decline cut in half</strong><span>New acquisition campaigns narrowed the YoY gap from –6.44% to –2.7%.</span></div>
+      </div>
+      <div class="case-tl-row">
+        <div class="tl-no mono">03</div>
+        <div class="tl-period">By month 4</div>
+        <div class="tl-body"><strong>Turned positive, back to growth</strong><span>Revenue crossed into growth territory for the first time in over a year.</span></div>
+      </div>
+      <div class="case-tl-row">
+        <div class="tl-no mono">04</div>
+        <div class="tl-period">Months 5–9</div>
+        <div class="tl-body"><strong>Growth accelerated, then held through a dip</strong><span>YoY gains peaked near +9.3% twice, dipped to +2.9% mid-stretch as order volume briefly softened, then recovered.</span></div>
+      </div>
+      <div class="case-tl-row hl">
+        <div class="tl-no mono">05</div>
+        <div class="tl-period">Latest month</div>
+        <div class="tl-body"><strong>New record: +12.28% YoY</strong><span>The strongest month of the engagement, driven mainly by average ticket value rather than traffic — a signal now feeding the next phase of work.</span></div>
       </div>
     </div>
   </section>
